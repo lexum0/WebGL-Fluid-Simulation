@@ -226,7 +226,7 @@ function startGUI () {
     // Clean UI
     setTimeout(function() { 
         document.getElementsByClassName("dg main a")[0].style.visibility = "hidden";
-    }, 500); // 100ms
+    }, 1000);
     // Close UI
     //document.getElementsByClassName("close-button close-bottom")[0].click()
     
