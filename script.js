@@ -222,6 +222,13 @@ function startGUI () {
         splatStack.push(parseInt(Math.random() * 20) + 5);
     } }, 'fun').name('Random splats');
 
+    // Lexum
+    // Clean UI
+    document.getElementsByClassName("dg main a")[0].style.visibility = "hidden";
+    // Close UI
+    //document.getElementsByClassName("close-button close-bottom")[0].click()
+    
+    // Lx
     setInterval(() => {
         splatStack.push(parseInt(Math.random() * 20) + 5);
     }, 1000);
