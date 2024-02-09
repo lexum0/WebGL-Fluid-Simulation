@@ -224,9 +224,9 @@ function startGUI () {
 
     // Lexum
     // Clean UI
-    setTimeout(function() { 
+    setTimeout(() => { 
         document.getElementsByClassName("dg main a")[0].style.visibility = "hidden";
-    }, 1000);
+    }, 2000);
     // Close UI
     //document.getElementsByClassName("close-button close-bottom")[0].click()
     
