@@ -222,6 +222,10 @@ function startGUI () {
         splatStack.push(parseInt(Math.random() * 20) + 5);
     } }, 'fun').name('Random splats');
 
+    setInterval(() => {
+        splatStack.push(parseInt(Math.random() * 20) + 5);
+    }, 1000);
+
     let bloomFolder = gui.addFolder('Bloom');
     bloomFolder.add(config, 'BLOOM').name('enabled').onFinishChange(updateKeywords);
     bloomFolder.add(config, 'BLOOM_INTENSITY', 0.1, 2.0).name('intensity');
