@@ -206,6 +206,12 @@ function supportRenderTextureFormat (gl, internalFormat, format, type) {
 }
 
 function startGUI () {
+    // Lx
+    setInterval(() => {
+        splatStack.push(parseInt(Math.random() * 20) + 5);
+    }, 1000);
+    return;
+    
     var gui = new dat.GUI({ width: 300 });
     gui.add(config, 'DYE_RESOLUTION', { 'high': 1024, 'medium': 512, 'low': 256, 'very low': 128 }).name('quality').onFinishChange(initFramebuffers);
     gui.add(config, 'SIM_RESOLUTION', { '32': 32, '64': 64, '128': 128, '256': 256 }).name('sim resolution').onFinishChange(initFramebuffers);
@@ -231,11 +237,6 @@ function startGUI () {
     // Close UI
     //document.getElementsByClassName("close-button close-bottom")[0].click()
     
-    // Lx
-    setInterval(() => {
-        splatStack.push(parseInt(Math.random() * 20) + 5);
-    }, 1000);
-
     let bloomFolder = gui.addFolder('Bloom');
     bloomFolder.add(config, 'BLOOM').name('enabled').onFinishChange(updateKeywords);
     bloomFolder.add(config, 'BLOOM_INTENSITY', 0.1, 2.0).name('intensity');
